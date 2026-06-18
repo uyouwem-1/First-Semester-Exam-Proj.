@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> MY WEATHER APP PROJECT</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-container">
+      <h1>Choose a City</h1>
+      <form id="search-form" class="search-form">
+        <input type="text" id="search-input" placeholder="Search for a city..." required autocomplete="off">
+        <button type="submit" id="search-button">Check</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="app-container">
+    
+    <div id="recent-searches" class="recent-searches"></div>
+
+    <div id="loading-state" class="status-message hidden">Loading...</div>
+    <div id="error-message" class="status-message error hidden">City not found. Please try again.</div>
+
+    <div id="weather-content" class="hidden">
+      
+      <section class="hero-section">
+        <div class="hero-main">
+          <div id="hero-icon-container" class="weather-icon-wrapper"></div>
+          <div class="hero-text">
+            <h2 id="city-name">Abuja, NG</h2>
+            <div class="temp-toggle-container">
+              <span id="current-temp" class="temperature">15°C</span>
+              <button id="unit-toggle" class="toggle-btn" title="Toggle Unit">/ °F</button>
+            </div>
+            <p id="weather-description">Partly Cloudy</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-row">
+        <div class="stat-card">
+          <span class="stat-label">Humidity</span>
+          <span id="stat-humidity" class="stat-value">72%</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Wind Speed</span>
+          <span id="stat-wind" class="stat-value">12 km/h</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">UV Index</span>
+          <span id="stat-uv" class="stat-value">3.5</span>
+        </div>
+      </section>
+
+      <section class="forecast-section">
+        <h3>5-Day Forecast</h3>
+        <div id="forecast-container" class="forecast-container">
+          
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
